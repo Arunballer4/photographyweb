@@ -1,0 +1,132 @@
+/* Add this CSS for the contact form */
+.contact-form {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.contact-form:hover {
+    transform: scale(1.05);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+input[type="submit"]:hover {
+    background: #555;
+}
+
+.message-sent {
+    display: none;
+    color: #009900;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Show the "Message Sent" div after submission */
+.message-sent.active {
+    display: block;
+}
+
+/* Styles for the menu */
+.menu-button {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.menu-button:hover {
+    color: #ce6868; /* Change the color on hover */
+}
+
+.menu-checkbox {
+    display: none;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background: #333;
+    padding: 20px;
+    transition: left 0.3s;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Add the animation to slide in the menu */
+.menu-checkbox:checked + .menu {
+    left: 0;
+}
+
+/* Additional styles for the menu links (you can modify as needed) */
+.menu a {
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.menu a:hover {
+    background: #444;
+}
+
+.menu a:active {
+    background: #555;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+

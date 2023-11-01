@@ -1,303 +1,143 @@
-
-/* Add styles for the checkbox and hidden menu */
-.menu-toggle {
-    display: none;
-}
-
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-    margin-right: 20px; /* Move the checkbox to the right side */
-    transition: transform 0.3s ease; /* Add hover transition */
-}
-
-/* Smooth animation for the checkbox */
-.menu-icon:hover {
-    transform: scale(1.1);
-}
-
-/* Styles for the hidden menu */
-.menu-toggle:checked + header .menu {
-    display: block;
-}
-
-@media screen and (max-width: 600px) {
-    header {
-        padding: 10px 0;
-    }
-
-    .menu {
-        display: none;
-        flex-direction: column;
-    }
-
-    .menu li {
-        margin: 10px 0;
-    }
-}
-
-
-/* Reset some default styles */
-body, h1, h2, p, ul, li {
+/* Reset some default styles and add a background color */
+body, h1, h2, h3, p {
     margin: 0;
     padding: 0;
-    list-style: none;
-    text-decoration: none;
 }
 
-/* Apply some basic styles to your website */
 body {
     font-family: Arial, sans-serif;
-    background-image: url('backgroundjpg.jpeg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-color: #f5f5f5;
+    background-color: #f0f0f0; /* Light gray background color */
+    text-align: center;
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background-color: #333; /* Dark background color for the header */
+    color: #fff; /* White text color */
     padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
 }
 
-nav {
+.header-content {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    justify-content: center;
 }
 
 .logo {
+    width: 30px; /* Adjust the size as needed */
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.center {
+    text-align: center;
+}
+
+.profile-frame {
+    display: inline-block;
+    border: 5px solid #333; /* Frame around the image */
+    padding: 5px; /* Adjust the padding as needed */
+    border-radius: 10px;
+}
+
+.profile-picture {
+    max-width: 300px; /* Adjust the size as needed */
+    display: block;
+    margin: 0 auto;
+}
+
+#about {
+    background-color: #fff; /* White background for the about section */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for a subtle depth effect */
+    text-align: left;
+}
+
+#about h3 {
     font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#about p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Styles for the menu */
+.menu-button {
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    transition: color 0.3s;
+}
+
+.menu-button:hover {
+    color: #ce6868; /* Change the color on hover */
+}
+
+.menu-checkbox {
+    display: none;
 }
 
 .menu {
-    display: flex;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background: #333;
+    padding: 20px;
+    transition: left 0.3s;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
 }
 
 .menu li {
-    margin: 0 20px;
-    transition: transform 0.3s ease; /* Add hover transition */
+    margin-bottom: 10px;
 }
 
 .menu a {
-    color: #fff;
-    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
 }
 
-.menu li:hover {
-    transform: scale(1.1); /* Add hover effect */
+/* Add the animation to slide in the menu */
+.menu-checkbox:checked + .menu {
+    left: 0;
 }
 
-.portfolio-section {
-    text-align: center;
-    padding: 40px 0;
+/* Additional styles for the menu links (you can modify as needed) */
+.menu a {
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.menu a:hover {
+    background: #ce5e5e;
+}
+
+.menu a:active {
+    background: #555;
 }
 
 footer {
-    background: #333;
+    background-color: #333;
     color: #fff;
-    text-align: center;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
 }
-
-.social-links {
-    display: flex;
-    justify-content: center;
-}
-
-.social-links li {
-    margin: 0 10px;
-}
-
-/* Styles for the image gallery */
-.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.image-container {
-    position: relative;
-}
-
-.image-container img {
-    max-width: 250px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    background-color: #fff;
-}
-
-.image-container .enlarge-button {
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    background: #333;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    display: none;
-}
-
-.image-container:hover {
-    transform: scale(1.05);
-    background-color: #ddd;
-}
-
-.image-container:hover .enlarge-button {
-    display: block;
-}
-
-/* Modal styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-.modal-content {
-    max-width: 80%;
-    margin: 0 auto;
-    display: block;
-    max-height: 90%;
-}
-
-.close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: #fff;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* Autumn leaves animation styles */
-#autumnLeaves {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-}
-
-.leaf {
-    position: absolute;
-    background: #ff9933;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    transform: rotate(45deg);
-    opacity: 0.7;
-    animation: fall linear infinite;
-}
-
-@keyframes fall {
-    0% {
-        transform: translate(0, -10px) rotate(45deg);
-    }
-    /* Add animation keyframes as needed */
-}
-
-/* Text box styles */
-.textbox {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    max-width: 500px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    color: #8B4513;
-}
-
-/* Responsive styles for phones */
-@media screen and (max-width: 600px) {
-    header {
-        padding: 10px 0;
-    }
-
-    .menu {
-        flex-direction: column;
-    }
-
-    .menu li {
-        margin: 10px 0;
-    }
-}
-/* Updated styles for the new section */
-.example-section {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #f9f9f9;
-}
-
-.photographer-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.photo-frame {
-    width: 200px;
-    height: 200px;
-    border: 5px solid #333; /* Adjust the border style as needed */
-    border-radius: 50%;
-    overflow: hidden;
-    position: relative;
-    animation: frameAnimation 3s ease infinite; /* Raining animation effect */
-}
-
-.photo-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.info {
-    text-align: center;
-}
-
-.info h3 {
-    font-size: 20px;
-    margin: 10px 0;
-}
-
-.info p {
-    margin: 5px 0;
-}
-
-@keyframes frameAnimation {
-    0% {
-        transform: translateY(-100px);
-    }
-    50% {
-        transform: translateY(100px);
-    }
-    100% {
-        transform: translateY(-100px);
-    }
-}
-
-

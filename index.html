@@ -3,67 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Website</title>
-    <link rel="stylesheet" href="index.css"> <!-- Updated CSS file reference -->
+    <title>Kumaran Pondicherry Photography - Photographer</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Kumaran Photography</div>
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <ul class="menu">
+    <div class="menu-bar">
+        <label for="menu-checkbox" class="menu-button">&#9776;</label>
+        <!-- Hidden menu -->
+        <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+        <nav class="menu">
+            <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#example">Example</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="prices.html">prices</a></li>
             </ul>
         </nav>
+    </div>
+    <header>
+        <div class="header-content">
+            <img src="img/logo.png" alt="Logo" class="logo">
+            <h1>Kumaran Pondicherry</h1>
+        </div>
     </header>
-
-    <section id="home" class="home-section">
-        <div class="home-content">
-            <h1>Welcome to My   Photography</h1>
-            <p>Capturing moments one click at a time.</p>
-        </div>
-    </section>
-
-    <section id="portfolio" class="portfolio-section">
-        <!-- Your portfolio content goes here -->
-    </section>
-
-    <section id="about" class="about-section">
-        <!-- Your about content goes here -->
-    </section>
-
-    <section id="example" class="example-section">
-        <div class="photographer-info">
-            <div class="photo-frame">
-                <img src="img/profile.jpg" alt="Your Photo"> <!-- Replace 'your-photo.jpg' with your image file path -->
+    <main>
+        <div class="center">
+            <div class="profile-frame">
+                <img src="img/profile.jpg" class="profile-picture" alt="Profile Picture">
             </div>
-            <div class="info">
-                <h3>Your Name</h3>
-                <p>Photographer</p>
-                <p>Contact: your@email.com</p>
-            </div>
+            <section id="about">
+                <h3>About Me</h3>
+                <p>
+                    I'm a passionate photographer based in the beautiful city of Bergen, Norway. With a keen eye for detail and a love for capturing moments, I create stunning visual stories through my lens. Whether it's portraits, landscapes, or events, I aim to encapsulate the essence of each moment in every photograph.
+                </p>
+            </section>
         </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-        <!-- Your contact information and form goes here -->
-    </section>
-
+    </main>
     <footer>
-        <ul class="social-links">
-            <li><a href="#" target="_blank">Facebook</a></li>
-            <li><a href="#" target="_blank">Instagram</a></li>
-            <li><a href="#" target="_blank">Twitter</a></li>
-        </ul>
+        <p>&copy; 2023 Kumaran Pondicherry - Photographer</p>
     </footer>
-
-    <script>
-        // Add your scroll down animation code here
-    </script>
 </body>
 </html>

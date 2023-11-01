@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="contact.css">
+    <title>Contact - Me</title>
+</head>
+<body>
+    <header>
+        <h1>Contact Me</h1>
+        <label for="menu-checkbox" class="menu-button">&#9776;</label> <!-- Menu button -->
+    </header>
+
+    <!-- Hidden menu -->
+    <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="prices.html">prices</a></li>
+        </ul>
+    </nav>
+
+    <div class="contact-form">
+        <form action="mailto:Kumaranbergen@yahoo.com" method="post" enctype="text/plain">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+
+            <input type="submit" value="Send">
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Kumaran Pondicherry - Photographer</p>
+    </footer>
+</body>
+</html>

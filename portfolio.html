@@ -3,64 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Portfolio</title>
-    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" type="text/css" href="portfolio.css">
+    <title>Portfolio - Your Name</title>
 </head>
 <body>
-    <input type="checkbox" id="menu-toggle" class="menu-toggle">
     <header>
-        <nav>
-            <div class="logo">Kumaran Photography</div>
-            <label for="menu-toggle" class="menu-icon">&#9776;</label>
-            <ul class="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>Your Name's Portfolio</h1>
+        <label for="menu-checkbox" class="menu-button">&#9776;</label> <!-- Menu button -->
     </header>
 
-    <section id="portfolio" class="portfolio-section">
-        <div class="portfolio-content">
-            <h2>My Portfolio</h2>
-            <div class="textbox">
-                <p>Welcome to my photography portfolio. Explore my best works below. Click on an image to enlarge it. I capture the beauty of autumn in my photography.</p>
-            </div>
-            <div class="image-gallery">
-                <!-- Insert your images here -->
-                <div class="image-container">
-                    <img src="/img/bergenautumn1.jpg" alt="Image 1">
-                    <button class="enlarge-button">Enlarge</button>
-                </div>
-                <div class="image-container">
-                    <img src="/img/bergenautumn3.jpg" alt="Image 2">
-                    <button class="enlarge-button">Enlarge</button>
-                </div>
-                <div class="image-container">
-                    <img src="/img/bergenatumn2.jpg" alt="Image 3">
-                    <button class="enlarge-button">Enlarge</button>
-                </div>
-                <!-- Add more images as needed -->
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <ul class="social-links">
-            <li><a href="#" target="_blank">Facebook</a></li>
-            <li><a href="#" target="_blank">Instagram</a></li>
-            <li><a href="#" target="_blank">Twitter</a></li>
+    <!-- Hidden menu -->
+    <input type="checkbox" id="menu-checkbox" class="menu-checkbox">
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="prices.html">prices</a></li>
         </ul>
-    </footer>
+    </nav>
 
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
+    <div class="gallery">
+        <!-- Replace these with your own images and captions -->
+        <div class="image">
+            <img src="image1.jpg" alt="Image 1">
+            <p>Caption for Image 1</p>
+        </div>
+        <!-- Add more images and captions as needed -->
+
+        <!-- Example for a total of 15 images -->
     </div>
 
-    <div id="autumnLeaves"></div>
-
-    <script src="script.js"></script>
+    <footer>
+        <p>&copy; 2023 Your Name - Photography</p>
+    </footer>
 </body>
 </html>
