@@ -21,6 +21,10 @@ form {
     align-items: center;
 }
 
+h2 {
+    margin-bottom: 20px; /* Added spacing below the "Contact Me" header */
+}
+
 label {
     font-weight: bold;
     margin-top: 10px;
@@ -62,7 +66,7 @@ input[type="submit"]:hover {
     display: block;
 }
 
-/* Styles for the menu */
+/* Styles for the menu and social links */
 .menu-button {
     font-size: 24px;
     cursor: pointer;
@@ -90,26 +94,25 @@ input[type="submit"]:hover {
     transition: left 0.3s;
 }
 
-.menu ul {
-    list-style: none;
-    padding: 0;
+.social-links {
+    text-align: center; /* Center the social links */
+    margin-top: 20px;
 }
 
-.menu li {
-    margin-bottom: 10px;
-}
-
-.menu a {
-    color: white;
+.social-links a {
+    display: inline-block;
+    margin: 10px;
     text-decoration: none;
+    color: #333;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
 
-/* Add the animation to slide in the menu */
 .menu-checkbox:checked + .menu {
     left: 0;
 }
 
-/* Additional styles for the menu links (you can modify as needed) */
 .menu a {
     display: block;
     padding: 10px;
@@ -124,9 +127,11 @@ input[type="submit"]:hover {
 .menu a:active {
     background: #555;
 }
+
 footer {
+    position: absolute;
+    bottom: 0;
     background-color: #333;
     color: #fff;
     padding: 10px 0;
 }
-
